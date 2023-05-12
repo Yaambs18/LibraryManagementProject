@@ -73,7 +73,7 @@ const issueBookToStudent = async (req, res) => {
         const result = await issueBook.save();
         bookInfo.quantity -= 1;
         const updatedBook = await bookInfo.save();
-        return res.json({ success: true, result });
+        return res.json({ success: true, result, message: "Book Issued successfully!!" });
     }
     catch(err) {
         console.log(err);
